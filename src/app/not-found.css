@@ -1,0 +1,12 @@
+body {
+    @apply bg-linear-e;
+}
+
+.text-404 {
+    font-size: 12rem;
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    -webkit-text-stroke: 2px white;
+    color: #FFFFFF99;
+    backdrop-filter: blur(10px);
+}

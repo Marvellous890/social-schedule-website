@@ -1,5 +1,6 @@
 export default function () {
   return (
-    <div className="bg-accent-1 ">Playground</div>
+    <div className="flex flex-col">
+    </div>
   )
 }

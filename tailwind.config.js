@@ -9,6 +9,12 @@ module.exports = {
     extend: {
       colors: {
         "accent-1": "#154112",
+        "blue-100": "#9CBDF3",
+        "blue-500": "#0F67EB",
+        "blue-800": "#093C8F",
+
+        "neutral-200": "#595D5F",
+        "neutral-500": "#1A1C1E",
       },
       backgroundImage: {
         "btn-linear": "linear-gradient(to right, #369E24, #116F01)",

@@ -14,7 +14,7 @@ export default function Home() {
 
 function Hero() {
     return (
-        <div className="py-10 px-5 grid md:grid-cols-2 max-md:gap-4">
+        <div className="pt-10 px-5 grid md:grid-cols-2 max-md:gap-4">
             <div className="flex flex-col justify-center gap-7">
                 <div className="grid grid-cols-2 gap-4 lg:flex">
                     <img src="/img/hero/p-of-week.svg" alt=""/>
@@ -26,7 +26,7 @@ function Hero() {
                     <p className="text-neutral-200">You can totally up your social media game with Stepby!</p>
                 </div>
 
-                <div className="flex gap-5 text-sm">
+                <div className="flex flex-col gap-2 sm:flex-row sm:gap-5 text-sm">
                     <FeatureItem text='Switch Plans Anytime'/>
                     <FeatureItem text='No Credit Card Needed'/>
                 </div>
@@ -69,7 +69,7 @@ const  logos = [
 
 function Featured() {
     return (
-        <div className="my-5 overflow-hidden h-16 flex relative before:absolute before:w-6 before:h-full before:bg-feature-gradient before:z-10 after:absolute after:right-0 after:w-6 after:h-full after:bg-feature-gradient-reverse after:z-10">
+        <div className="bg-white overflow-hidden h-24 flex relative before:absolute before:w-6 before:h-full before:bg-feature-gradient before:z-10 after:absolute after:right-0 after:w-6 after:h-full after:bg-feature-gradient-reverse after:z-10">
             {[0, 1, 2].map((i) => (
                 <div
                     key={i}
@@ -77,7 +77,7 @@ function Featured() {
                     aria-hidden={i !== 0 ? "true" : undefined}
                 >
                     {logos.map((l) => (
-                        <img className="mx-6 block min-w-[150px]" src={l} alt="logo" key={l} />
+                        <img className="mx-10 block min-w-[150px]" src={l} alt="logo" key={l} />
                     ))}
                 </div>
             ))}

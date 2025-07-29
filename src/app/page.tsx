@@ -6,6 +6,7 @@ export default function Home() {
         <div className="xl:max-w-[1920px] xl:mx-auto">
             <TopNavBar/>
             <Hero/>
+            <Featured/>
         </div>
     );
 }
@@ -56,3 +57,30 @@ function FeatureItem({text = "sample"}) {
     );
 }
 
+const  logos = [
+    "/img/netflix.svg",
+    "/img/attentive.svg",
+    "/img/canva.svg",
+    "/img/gusto.svg",
+    "/img/loom.svg",
+    "/img/slack.svg",
+];
+
+
+function Featured() {
+    return (
+        <div className="my-5 overflow-hidden h-16 flex relative before:absolute before:w-6 before:h-full before:bg-feature-gradient before:z-10 after:absolute after:right-0 after:w-6 after:h-full after:bg-feature-gradient-reverse after:z-10">
+            {[0, 1, 2].map((i) => (
+                <div
+                    key={i}
+                    className="flex animate-marquee"
+                    aria-hidden={i !== 0 ? "true" : undefined}
+                >
+                    {logos.map((l) => (
+                        <img className="mx-6 block min-w-[150px]" src={l} alt="logo" key={l} />
+                    ))}
+                </div>
+            ))}
+        </div>
+    )
+}

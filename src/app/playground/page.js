@@ -1,7 +1,5 @@
-import Button from "../../components/Button";
+import './play.css'
 
 export default function () {
-  return (
-    <div>Hi</div>
-  )
+  return <div>Hi</div>
 }

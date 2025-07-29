@@ -8,6 +8,7 @@ body {
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   width: 100%;
   min-height: 100vh;
+  @apply bg-[#F6F8FA];
 }
 
 .top-nav-bar {

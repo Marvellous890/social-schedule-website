@@ -2,6 +2,7 @@ import {Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import {Bars3Icon, BellIcon, XMarkIcon} from '@heroicons/react/24/outline'
 import Link from "next/link";
 import {cn} from "@/Utilities";
+import Button from "@/components/Button";
 
 const links = [
   {
@@ -24,7 +25,7 @@ const links = [
 
 export default function TopNavBar() {
   return (
-    <Disclosure as="nav" className="bg-[#F6F8FA] shadow-sm">
+    <Disclosure as="nav" className="shadow-sm sticky bg-[#F6F8FA99] top-0 backdrop-blur">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 justify-between">
           <div className="flex shrink-0 items-center">
@@ -44,10 +45,8 @@ export default function TopNavBar() {
 
           <div className="hidden sm:flex sm:items-center sm:gap-2">
             {/* Desktop login and start now btn*/}
-            <button className="border border-blue-100 rounded-xl px-3 py-1.5 shadow text-blue-800 font-medium">Log In
-            </button>
-            <button className="border bg-blue-500 rounded-xl px-3 py-1.5 shadow text-white font-medium">Start now
-            </button>
+            <Button style="outline" text="Log In"/>
+            <Button style="fill" text="Start now"/>
           </div>
 
 

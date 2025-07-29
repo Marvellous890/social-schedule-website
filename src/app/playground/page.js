@@ -1,6 +1,7 @@
+import Button from "../../components/Button";
+
 export default function () {
   return (
-    <div className="flex flex-col">
-    </div>
+    <div>Hi</div>
   )
 }

@@ -8,6 +8,7 @@ export default function Home() {
             <Hero/>
             <Featured/>
             <Feature1/>
+            <Feature2/>
         </div>
     );
 }
@@ -24,7 +25,7 @@ function Hero() {
 
                 <div>
                     <p className="font-bold text-neutral-500 text-4xl">Save Time and Get Real Results.</p>
-                    <p className="text-neutral-200">You can totally up your social media game with Stepby!</p>
+                    <p className="text-neutral-200 text-sm">You can totally up your social media game with Stepby!</p>
                 </div>
 
                 <div className="flex flex-col gap-2 sm:flex-row sm:gap-5 text-sm">
@@ -93,14 +94,16 @@ function Feature1() {
         /* I changed md:flex-row-reverse to sm:flex-row-reverse. watch out for other md: */
         <div className="py-10 px-5 md:pr-0 flex flex-col sm:flex-row-reverse">
             <div className="md:flex md:flex-col md:justify-center md:basis-1/2">
-                <p className="font-semibold text-3xl">Collaboration Made <span className="text-blue-500">Effortless</span></p>
+                <p className="font-semibold text-3xl">Collaboration Made <span
+                    className="text-blue-500">Effortless</span></p>
 
                 <div className="my-6">
                     <div className="flex items-center gap-4 mb-3">
                         <p className="text-5xl font-semibold text-cyan-500">88%</p>
                         <p className="text-sm">Regular user every month</p>
                     </div>
-                    <p className="text-sm">Social schedule permission levels and approval flows empower your team to work independently,
+                    <p className="text-sm">Social schedule permission levels and approval flows empower your team to
+                        work independently,
                         eliminating the need for micro-management.</p>
                 </div>
             </div>
@@ -115,3 +118,72 @@ function Feature1() {
         </div>
     );
 }
+
+
+const feature2BtnTexts = [
+    'Teamwork',
+    'Engagement',
+    'Data Analysis',
+    'Publish and Schedule',
+]
+
+function Feature2() {
+    return (
+        <div className="py-10 px-5">
+            <p className="text-3xl font-semibold text-center">Tackling Social Media Challenges <span
+                className="text-blue-500">Daily Across</span> Industries</p>
+            <div className="flex flex-wrap gap-4 justify-center mt-8">
+                {feature2BtnTexts.map((t, i) => (
+                    <Button key={t} text={t} style={i == 0 ? "fill" : "outline"}/>
+                ))}
+            </div>
+
+            <div className="mt-8 md:flex md:justify-center md:items-center">
+                <div>
+                    <p className="text-sm md:text-[1rem]">Utilize the social media scheduler to share posts across various accounts and
+                        platforms.</p>
+
+                    <div className="mt-8 space-y-4">
+                        <Feature2ListItem
+                            icon="calendar"
+                            title="Content Schedule"
+                            desc="Strategize, arrange, and timetable posts for regular publishing."
+                        />
+                        <Feature2ListItem
+                            icon="star"
+                            title="Intelligent Assistant"
+                            desc="Overcome creative obstacles and spark inspiration with fresh ideas."
+                        />
+                        <Feature2ListItem
+                            icon="layer"
+                            title="Mass Scheduling"
+                            desc="Handle the social schedule with 300+ posts planned simultaneously."
+                        />
+                    </div>
+                </div>
+
+                <img className="inline-block mt-8" src="/img/social-media-icons-group.svg" alt=""/>
+            </div>
+        </div>
+    );
+}
+
+function Feature2ListItem({icon, title, desc}: { icon: string; title: string; desc: string }) {
+    return (
+        <div className="flex h-[3.75rem] gap-4 items-center">
+            <div className="p-2 bg-blue-25 rounded-[6px] flex items-center justify-center">
+                <picture>
+                    <source media="(min-width: 768px)" srcSet={`/img/${icon}.svg`}/>
+                    <img src={`/img/${icon}-thin.svg`} alt=""/>
+                </picture>
+            </div>
+
+            <div className="flex flex-col">
+                <p className="text-blue-500 font-semibold">{title}</p>
+                <p className="text-sm text-neutral-300">{desc}</p>
+            </div>
+        </div>
+    );
+}
+
+

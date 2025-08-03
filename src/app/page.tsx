@@ -9,6 +9,7 @@ export default function Home() {
             <Featured/>
             <Feature1/>
             <Feature2/>
+            <Feature3/>
         </div>
     );
 }
@@ -140,7 +141,8 @@ function Feature2() {
 
             <div className="mt-8 md:flex md:justify-center md:items-center">
                 <div>
-                    <p className="text-sm md:text-[1rem]">Utilize the social media scheduler to share posts across various accounts and
+                    <p className="text-sm md:text-[1rem]">Utilize the social media scheduler to share posts across
+                        various accounts and
                         platforms.</p>
 
                     <div className="mt-8 space-y-4">
@@ -187,3 +189,22 @@ function Feature2ListItem({icon, title, desc}: { icon: string; title: string; de
 }
 
 
+function Feature3() {
+    return (
+        <div className="bg-neutral-500 py-10 px-6 flex flex-col text-white items-center">
+            {/* texts */}
+            <div className="text-center">
+                <p className="text-3xl font-semibold leading-9">Achieving Business Impact Should be Simpler</p>
+                <p className="text-[#CDD0D5] mt-2.5">Stepby’s integrated social media management platform allows your team to unlock real business value, enhance your market standing, and boost revenue—swiftly.</p>
+            </div>
+
+            {/*Picture*/}
+            <div className="mt-8 md:mt-[50px]">
+                <picture>
+                    <source media="(min-width: 768px)" srcSet="/img/feature-container-d.svg"/>
+                    <img src="/img/feature-container-m.svg" alt=""/>
+                </picture>
+            </div>
+        </div>
+    );
+}

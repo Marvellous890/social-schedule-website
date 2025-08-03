@@ -7,6 +7,7 @@ export default function Home() {
             <TopNavBar/>
             <Hero/>
             <Featured/>
+            <Feature1/>
         </div>
     );
 }
@@ -52,12 +53,13 @@ function FeatureItem({text = "sample"}) {
     return (
         <div className="flex gap-2">
             <img src="/img/hero/feature-icon.svg" alt=""/>
-            <p>{text}</p>
+            <p className="text-sm">{text}</p>
         </div>
     );
 }
 
-const  logos = [
+
+const logos = [
     "/img/netflix.svg",
     "/img/attentive.svg",
     "/img/canva.svg",
@@ -66,10 +68,10 @@ const  logos = [
     "/img/slack.svg",
 ];
 
-
 function Featured() {
     return (
-        <div className="bg-white overflow-hidden h-24 flex relative before:absolute before:w-6 before:h-full before:bg-feature-gradient before:z-10 after:absolute after:right-0 after:w-6 after:h-full after:bg-feature-gradient-reverse after:z-10">
+        <div
+            className="bg-white overflow-hidden h-24 flex relative before:absolute before:w-6 before:h-full before:bg-feature-gradient before:z-[5] after:absolute after:right-0 after:w-6 after:h-full after:bg-feature-gradient-reverse after:z-[5]">
             {[0, 1, 2].map((i) => (
                 <div
                     key={i}
@@ -77,10 +79,39 @@ function Featured() {
                     aria-hidden={i !== 0 ? "true" : undefined}
                 >
                     {logos.map((l) => (
-                        <img className="mx-10 block min-w-[150px]" src={l} alt="logo" key={l} />
+                        <img className="mx-10 block min-w-[150px]" src={l} alt="logo" key={l}/>
                     ))}
                 </div>
             ))}
         </div>
     )
+}
+
+
+function Feature1() {
+    return (
+        /* I changed md:flex-row-reverse to sm:flex-row-reverse. watch out for other md: */
+        <div className="py-10 px-5 md:pr-0 flex flex-col sm:flex-row-reverse">
+            <div className="md:flex md:flex-col md:justify-center md:basis-1/2">
+                <p className="font-semibold text-3xl">Collaboration Made <span className="text-blue-500">Effortless</span></p>
+
+                <div className="my-6">
+                    <div className="flex items-center gap-4 mb-3">
+                        <p className="text-5xl font-semibold text-cyan-500">88%</p>
+                        <p className="text-sm">Regular user every month</p>
+                    </div>
+                    <p className="text-sm">Social schedule permission levels and approval flows empower your team to work independently,
+                        eliminating the need for micro-management.</p>
+                </div>
+            </div>
+
+            {/* Picture*/}
+            <div className="md:flex md:justify-center md:basis-1/2">
+                <picture className="inline-block lg:max-w-xl">
+                    <source media="(min-width: 1024px)" srcSet="/img/social-media-stats-d.png"/>
+                    <img src="/img/social-media-stats-m.png" alt=""/>
+                </picture>
+            </div>
+        </div>
+    );
 }

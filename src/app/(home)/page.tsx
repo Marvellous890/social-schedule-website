@@ -22,7 +22,7 @@ export default function Home() {
 
 function Hero() {
     return (
-        <div className="pt-10 px-5 grid md:grid-cols-2 max-md:gap-4">
+        <div className="pt-10 px-5 xl:pl-16 grid md:grid-cols-2 max-md:gap-4">
             <div className="flex flex-col justify-center gap-7">
                 <div className="grid grid-cols-2 gap-4 lg:flex">
                     <img src="/img/hero/p-of-week.svg" alt=""/>
@@ -135,7 +135,7 @@ const feature2BtnTexts = [
 
 function Feature2() {
     return (
-        <div className="py-10 lg:px-10 px-5">
+        <div className="py-10 lg:px-10 xl:px-16 px-5">
             <p className="text-3xl font-semibold text-center">Tackling Social Media Challenges <span
                 className="text-blue-500">Daily Across</span> Industries</p>
             <div className="flex flex-wrap gap-4 justify-center mt-8">
@@ -169,7 +169,8 @@ function Feature2() {
                     </div>
                 </div>
 
-                <img className="mt-8 block mx-auto sm:max-w-[50%] lg:max-w-[30%]" src="/img/social-media-icons-group.svg" alt=""/>
+                <img className="mt-8 block mx-auto sm:max-w-[50%] lg:max-w-[30%]"
+                     src="/img/social-media-icons-group.svg" alt=""/>
             </div>
         </div>
     );
@@ -226,12 +227,24 @@ function Container() {
                     marketers and is highly recommended for its powerful features.</p>
             </div>
 
-            <div className="mt-20 space-y-20 md:w-96">
-                <ContainerCard img="container-people.svg" title="20k+" desc="Clients from various industries"/>
-                <ContainerCard img="container-love.svg" title="5M+" desc="Posts released every month"
-                               className="border-indigo-50"/>
-                <ContainerCard img="container-star.svg" title="4.8" desc="Highly rated on user-friendliness"
-                               className="border-cyan-500"/>
+            <div className="mt-20 max-md:space-y-20 md:flex md:space-x-10">
+                <ContainerCard
+                    img="container-people.svg"
+                    title="20k+"
+                    desc="Clients from various industries"
+                />
+                <ContainerCard
+                    img="container-love.svg"
+                    title="5M+"
+                    desc="Posts released every month"
+                    className="border-indigo-50"
+                />
+                <ContainerCard
+                    img="container-star.svg"
+                    title="4.8"
+                    desc="Highly rated on user-friendliness"
+                    className="border-cyan-500"
+                />
             </div>
         </div>
     );
@@ -285,9 +298,12 @@ function About1() {
 function CTA2() {
     return (
         <div className="py-10 md:px-10 text-center space-y-8 bg-white">
-            <p className="text-3xl font-semibold leading-9 text-neutral-500">You Can Count on us for <span className="text-blue-500">Assistance</span></p>
+            <p className="text-3xl font-semibold leading-9 text-neutral-500">You Can Count on us for <span
+                className="text-blue-500">Assistance</span></p>
             <img src="/img/cta2-img.svg" alt="" className="block mx-auto"/>
-            <p className="text-neutral-200 max-md:text-sm">Our customer advocates are available 24/7 to support you via email and social media. For those who prefer self-service, we offer a comprehensive, regularly updated help center.</p>
+            <p className="text-neutral-200 max-md:text-sm">Our customer advocates are available 24/7 to support you via
+                email and social media. For those who prefer self-service, we offer a comprehensive, regularly updated
+                help center.</p>
         </div>
     );
 }
@@ -298,7 +314,7 @@ function Integrations() {
         <div className="py-10 px-4 md:px-10 text-center space-y-10">
             <p className="text-3xl font-semibold leading-9 text-neutral-500">Integrations</p>
             <img src="/img/integrations-container.svg" alt="" className="block mx-auto"/>
-            <Button text="Se all integrations" style="outline" />
+            <Button text="See all integrations" style="outline"/>
         </div>
     );
 }

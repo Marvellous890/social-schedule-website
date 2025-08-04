@@ -13,6 +13,7 @@ export default function Home() {
             <Feature3/>
             <Container/>
             <About1/>
+            <CTA2/>
         </div>
     );
 }
@@ -133,7 +134,7 @@ const feature2BtnTexts = [
 
 function Feature2() {
     return (
-        <div className="py-10 px-5">
+        <div className="py-10 lg:px-10 px-5">
             <p className="text-3xl font-semibold text-center">Tackling Social Media Challenges <span
                 className="text-blue-500">Daily Across</span> Industries</p>
             <div className="flex flex-wrap gap-4 justify-center mt-8">
@@ -167,7 +168,7 @@ function Feature2() {
                     </div>
                 </div>
 
-                <img className="inline-block mt-8" src="/img/social-media-icons-group.svg" alt=""/>
+                <img className="mt-8 block mx-auto sm:max-w-[50%] lg:max-w-[30%]" src="/img/social-media-icons-group.svg" alt=""/>
             </div>
         </div>
     );
@@ -275,6 +276,17 @@ function About1() {
                 <source media="(min-width: 768px)" srcSet="/img/about-1-d.png"/>
                 <img src="/img/about-1-m.png" alt=""/>
             </picture>
+        </div>
+    );
+}
+
+
+function CTA2() {
+    return (
+        <div className="py-10 md:px-10 text-center space-y-8">
+            <p className="text-3xl font-semibold leading-9 text-neutral-500">You Can Count on us for <span className="text-blue-500">Assistance</span></p>
+            <img src="/img/cta2-img.svg" alt="" className="block mx-auto"/>
+            <p className="text-neutral-200 max-md:text-sm">Our customer advocates are available 24/7 to support you via email and social media. For those who prefer self-service, we offer a comprehensive, regularly updated help center.</p>
         </div>
     );
 }

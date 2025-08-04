@@ -12,6 +12,7 @@ export default function Home() {
             <Feature2/>
             <Feature3/>
             <Container/>
+            <About1/>
         </div>
     );
 }
@@ -197,7 +198,8 @@ function Feature3() {
             {/* texts */}
             <div className="text-center">
                 <p className="text-3xl font-semibold leading-9">Achieving Business Impact Should be Simpler</p>
-                <p className="text-[#CDD0D5] mt-2.5">Stepby’s integrated social media management platform allows your team to unlock real business value, enhance your market standing, and boost revenue—swiftly.</p>
+                <p className="text-[#CDD0D5] mt-2.5">Stepby’s integrated social media management platform allows your
+                    team to unlock real business value, enhance your market standing, and boost revenue—swiftly.</p>
             </div>
 
             {/*Picture*/}
@@ -216,26 +218,63 @@ function Container() {
     return (
         <div className="py-20 px-6 flex flex-col items-center">
             <div className="text-center">
-                <p className="text-3xl font-semibold leading-9 text-neutral-500">Agencies and Brands Worldwide <span className="text-blue-500">Trust us</span></p>
-                <p className="text-neutral-200 mt-2.5">Stepby is an essential tool for thousands of social media marketers and is highly recommended for its powerful features.</p>
+                <p className="text-3xl font-semibold leading-9 text-neutral-500">Agencies and Brands Worldwide <span
+                    className="text-blue-500">Trust us</span></p>
+                <p className="text-neutral-200 mt-2.5">Stepby is an essential tool for thousands of social media
+                    marketers and is highly recommended for its powerful features.</p>
             </div>
 
             <div className="mt-20 space-y-20 md:w-96">
                 <ContainerCard img="container-people.svg" title="20k+" desc="Clients from various industries"/>
-                <ContainerCard img="container-love.svg" title="5M+" desc="Posts released every month" className="border-indigo-50"/>
-                <ContainerCard img="container-star.svg" title="4.8" desc="Highly rated on user-friendliness" className="border-cyan-500"/>
+                <ContainerCard img="container-love.svg" title="5M+" desc="Posts released every month"
+                               className="border-indigo-50"/>
+                <ContainerCard img="container-star.svg" title="4.8" desc="Highly rated on user-friendliness"
+                               className="border-cyan-500"/>
             </div>
         </div>
     );
 }
 
 
-function ContainerCard({img, title, desc, className} : {img: string; title: string; desc: string; className?: string;}) {
+function ContainerCard({img, title, desc, className}: {
+    img: string;
+    title: string;
+    desc: string;
+    className?: string;
+}) {
     return (
-        <div className={cn("flex flex-col items-center p-5 gap-2 border-2 border-blue-50 rounded-lg text-center", className)}>
+        <div
+            className={cn("flex flex-col items-center p-5 gap-2 border-2 border-blue-50 rounded-lg text-center", className)}>
             <img src={`/img/${img}`} alt="" className="-mt-16"/>
             <p className="text-3xl font-semibold leading-9 text-neutral-500 uppercase -mt-3">{title}</p>
             <p className="text-neutral-200 mt-2.5">{desc}</p>
+        </div>
+    );
+}
+
+
+function About1() {
+    return (
+        <div className="py-20 px-6 bg-white">
+            <div className="flex flex-col md:flex-row md:items-center lg:px-10 space-y-5">
+                <p className="text-3xl font-semibold leading-9 text-neutral-500"><span className="text-blue-500">What is Stepby</span> and
+                    How Connect With Others?</p>
+
+                <div className="flex flex-col space-y-4">
+                    <p className="text-neutral-200">Stepby is an AI-powered platform offering tools, integrations,
+                        and resources for marketing, sales, and customer service.</p>
+
+                    <div className="space-x-4">
+                        <Button text="Learn More" style="fill"/>
+                        <Button text="Get started for free" style="outline"/>
+                    </div>
+                </div>
+            </div>
+
+            <picture className="inline-block !mt-10">
+                <source media="(min-width: 768px)" srcSet="/img/about-1-d.png"/>
+                <img src="/img/about-1-m.png" alt=""/>
+            </picture>
         </div>
     );
 }

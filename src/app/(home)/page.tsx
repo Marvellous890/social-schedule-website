@@ -14,6 +14,7 @@ export default function Home() {
             <Container/>
             <About1/>
             <CTA2/>
+            <Integrations/>
         </div>
     );
 }
@@ -283,10 +284,21 @@ function About1() {
 
 function CTA2() {
     return (
-        <div className="py-10 md:px-10 text-center space-y-8">
+        <div className="py-10 md:px-10 text-center space-y-8 bg-white">
             <p className="text-3xl font-semibold leading-9 text-neutral-500">You Can Count on us for <span className="text-blue-500">Assistance</span></p>
             <img src="/img/cta2-img.svg" alt="" className="block mx-auto"/>
             <p className="text-neutral-200 max-md:text-sm">Our customer advocates are available 24/7 to support you via email and social media. For those who prefer self-service, we offer a comprehensive, regularly updated help center.</p>
+        </div>
+    );
+}
+
+
+function Integrations() {
+    return (
+        <div className="py-10 px-4 md:px-10 text-center space-y-10">
+            <p className="text-3xl font-semibold leading-9 text-neutral-500">Integrations</p>
+            <img src="/img/integrations-container.svg" alt="" className="block mx-auto"/>
+            <Button text="Se all integrations" style="outline" />
         </div>
     );
 }

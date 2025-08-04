@@ -1,5 +1,6 @@
 import TopNavBar from "@/components/NavBar";
 import Button from "@/components/Button";
+import {cn} from "@/Utilities";
 
 export default function Home() {
     return (
@@ -10,6 +11,7 @@ export default function Home() {
             <Feature1/>
             <Feature2/>
             <Feature3/>
+            <Container/>
         </div>
     );
 }
@@ -205,6 +207,35 @@ function Feature3() {
                     <img src="/img/feature-container-m.svg" alt=""/>
                 </picture>
             </div>
+        </div>
+    );
+}
+
+
+function Container() {
+    return (
+        <div className="py-20 px-6 flex flex-col items-center">
+            <div className="text-center">
+                <p className="text-3xl font-semibold leading-9 text-neutral-500">Agencies and Brands Worldwide <span className="text-blue-500">Trust us</span></p>
+                <p className="text-neutral-200 mt-2.5">Stepby is an essential tool for thousands of social media marketers and is highly recommended for its powerful features.</p>
+            </div>
+
+            <div className="mt-20 space-y-20 md:w-96">
+                <ContainerCard img="container-people.svg" title="20k+" desc="Clients from various industries"/>
+                <ContainerCard img="container-love.svg" title="5M+" desc="Posts released every month" className="border-indigo-50"/>
+                <ContainerCard img="container-star.svg" title="4.8" desc="Highly rated on user-friendliness" className="border-cyan-500"/>
+            </div>
+        </div>
+    );
+}
+
+
+function ContainerCard({img, title, desc, className} : {img: string; title: string; desc: string; className?: string;}) {
+    return (
+        <div className={cn("flex flex-col items-center p-5 gap-2 border-2 border-blue-50 rounded-lg text-center", className)}>
+            <img src={`/img/${img}`} alt="" className="-mt-16"/>
+            <p className="text-3xl font-semibold leading-9 text-neutral-500 uppercase -mt-3">{title}</p>
+            <p className="text-neutral-200 mt-2.5">{desc}</p>
         </div>
     );
 }

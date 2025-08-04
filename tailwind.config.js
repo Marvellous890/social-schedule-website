@@ -9,15 +9,21 @@ module.exports = {
     extend: {
       colors: {
         "accent-1": "#154112",
+
         "blue-25": "#DEE7FA",
+        "blue-50": "#BDCFF5",
         "blue-100": "#9CBDF3",
         "blue-500": "#0F67EB",
         "blue-800": "#093C8F",
+
+        "cyan-50": "#D8F5FA",
         "cyan-500": "#14C2E0",
 
         "neutral-200": "#595D5F",
         "neutral-300": "#434749",
         "neutral-500": "#1A1C1E",
+
+        "indigo-50": "#C4C0FE",
       },
       backgroundImage: {
         "btn-linear": "linear-gradient(to right, #369E24, #116F01)",

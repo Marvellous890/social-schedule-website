@@ -15,6 +15,7 @@ export default function Home() {
             <About1/>
             <CTA2/>
             <Integrations/>
+            <CTA/>
         </div>
     );
 }
@@ -315,6 +316,25 @@ function Integrations() {
             <p className="text-3xl font-semibold leading-9 text-neutral-500">Integrations</p>
             <img src="/img/integrations-container.svg" alt="" className="block mx-auto"/>
             <Button text="See all integrations" style="outline"/>
+        </div>
+    );
+}
+
+
+function CTA() {
+    return (
+        <div className="py-10 px-4 md:px-10 min-h-96 bg-[url('/img/cta-bg.jpg')] bg-[-50%] md:bg-[50%] text-white md:flex">
+            <div className="space-y-5 md:flex md:flex-col md:justify-center">
+                <p className="text-3xl font-semibold leading-9">Scalable Enterprise Social
+                    Solutions</p>
+                <p className="text-disabled-300 text-sm">Need a comprehensive platform your team will love to use? Discover how
+                    you can make an impact across your entire business, from industry insights and competitive
+                    intelligence to customer service, data, and analytics.</p>
+
+                <Button text="Request a demo" style="fill" className="border-none w-fit" />
+            </div>
+
+            <img src="/img/cta-img.png" alt="" className="max-md:mt-10 md:w-1/2"/>
         </div>
     );
 }

@@ -1,6 +1,7 @@
 import TopNavBar from "@/components/NavBar";
 import Button from "@/components/Button";
 import {cn} from "@/Utilities";
+import Footer from "@/components/Footer";
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             <CTA2/>
             <Integrations/>
             <CTA/>
+            <Footer/>
         </div>
     );
 }

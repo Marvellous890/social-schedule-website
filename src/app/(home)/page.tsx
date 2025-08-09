@@ -4,7 +4,7 @@ import TopNavBar from "@/components/NavBar";
 import Button from "@/components/Button";
 import {cn} from "@/Utilities";
 import Footer from "@/components/Footer";
-import {motion, } from "framer-motion";
+import {motion,} from "framer-motion";
 
 export default function Home() {
 
@@ -25,7 +25,18 @@ export default function Home() {
                 <Hero/>
             </motion.div>
 
-            <Featured/>
+            <motion.div
+                initial={{opacity: 0}}
+                whileInView={{
+                    opacity: 1,
+                    transition: {
+                        duration: .5
+                    }
+                }}
+                viewport={{once: true}}
+            >
+                <Featured/>
+            </motion.div>
 
             <motion.div
                 initial={{opacity: 0}}
@@ -141,7 +152,8 @@ function Hero() {
     return (
         <div className="pt-10 px-5 xl:pl-16 grid md:grid-cols-2 max-md:gap-4">
             <div className="flex flex-col justify-center gap-7">
-                <a href="https://ui8.net/wily/products/social-schedule-website-template" target="_blank" className="hero-banner-button relative rounded-[.875rem] flex text-sm text-neutral-500">
+                <a href="https://ui8.net/wily/products/social-schedule-website-template" target="_blank"
+                   className="hero-banner-button relative rounded-[.875rem] flex text-sm text-neutral-500">
                     <svg className="shrink-0" xmlns="http://www.w3.org/2000/svg" height="20" width="20"
                          viewBox="0 0 24 24" aria-hidden="true">
                         <use xlinkHref="#sparkle"></use>
@@ -152,7 +164,11 @@ function Hero() {
                                     fill="currentColor" stroke="none" fillRule="evenodd"></path>
                             </symbol>
 
-                            <symbol id="arrow-right" stroke="currentColor" viewBox="0 0 20 20"><path d="M9.750 4.963 C 9.591 5.036,9.520 5.110,9.451 5.275 C 9.386 5.431,9.386 5.569,9.451 5.726 C 9.487 5.812,10.049 6.397,11.276 7.625 L 13.050 9.400 9.215 9.400 L 5.381 9.400 5.232 9.475 C 4.795 9.696,4.795 10.304,5.232 10.525 L 5.381 10.600 9.215 10.600 L 13.050 10.600 11.276 12.375 C 10.049 13.603,9.487 14.188,9.451 14.274 C 9.386 14.431,9.386 14.569,9.451 14.725 C 9.520 14.890,9.591 14.964,9.750 15.037 C 9.920 15.115,10.082 15.115,10.250 15.036 C 10.416 14.958,15.013 10.363,15.065 10.223 C 15.110 10.103,15.110 9.897,15.065 9.777 C 15.013 9.637,10.416 5.042,10.250 4.964 C 10.082 4.885,9.920 4.885,9.750 4.963 " stroke="none" fill-rule="evenodd" fill="currentColor"></path></symbol>
+                            <symbol id="arrow-right" stroke="currentColor" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.750 4.963 C 9.591 5.036,9.520 5.110,9.451 5.275 C 9.386 5.431,9.386 5.569,9.451 5.726 C 9.487 5.812,10.049 6.397,11.276 7.625 L 13.050 9.400 9.215 9.400 L 5.381 9.400 5.232 9.475 C 4.795 9.696,4.795 10.304,5.232 10.525 L 5.381 10.600 9.215 10.600 L 13.050 10.600 11.276 12.375 C 10.049 13.603,9.487 14.188,9.451 14.274 C 9.386 14.431,9.386 14.569,9.451 14.725 C 9.520 14.890,9.591 14.964,9.750 15.037 C 9.920 15.115,10.082 15.115,10.250 15.036 C 10.416 14.958,15.013 10.363,15.065 10.223 C 15.110 10.103,15.110 9.897,15.065 9.777 C 15.013 9.637,10.416 5.042,10.250 4.964 C 10.082 4.885,9.920 4.885,9.750 4.963 "
+                                    stroke="none" fill-rule="evenodd" fill="currentColor"></path>
+                            </symbol>
                         </defs>
                     </svg>
 
